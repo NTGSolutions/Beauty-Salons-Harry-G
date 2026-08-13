@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+arcgis
+requests
+qrcode
+docxtpl
+python-docx
