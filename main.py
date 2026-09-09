@@ -94,20 +94,12 @@ ACTION_TAKEN_FIELD = os.getenv(
 
 REPORT_STATUS_FIELD = os.getenv(
     "REPORT_STATUS_FIELD",
-    "Coa_Notice"
 )
 
 
 # =========================================================
 # DOCUMENT TEMPLATES
 # =========================================================
-
-COA_TEMPLATE_PATH = os.getenv(
-    "COA_TEMPLATE_PATH",
-    "./templates/COA_TEMPLATE_PATH.docx"
-)
-
-
 
 FINE_TEMPLATE_PATH = os.getenv(
     "FINE_TEMPLATE_PATH",
@@ -237,7 +229,6 @@ def validate_paths() -> None:
     """
 
     templates = {
-        "COA": COA_TEMPLATE_PATH,
         "FINE": FINE_TEMPLATE_PATH,
         "COMPLIANCE NOTICE": COMPLIANCE_NOTICE_TEMPLATE_PATH,
         "PROHIBITION NOTICE": PROHIBITION_NOTICE_TEMPLATE_PATH,
@@ -761,11 +752,6 @@ def choose_templates(
     AND
     compliance_status = compliant
 
-    Generate:
-        COA
-    
-
-
     RULE 2
     ---------------------------------------------------------
     action_taken = issue_fine
@@ -851,13 +837,6 @@ def choose_templates(
         and
         compliance_status == "compliant"
     ):
-
-        documents.append(
-            (
-                COA_TEMPLATE_PATH,
-                "COA"
-            )
-        )
 
 
         documents.append(
