@@ -94,6 +94,7 @@ ACTION_TAKEN_FIELD = os.getenv(
 
 REPORT_STATUS_FIELD = os.getenv(
     "REPORT_STATUS_FIELD",
+    "report_status"
 )
 
 
